@@ -62,3 +62,10 @@ const person = {
 
 console.log(person.greet()); //output :- "I'm undefined"
 console.log(person.greet1()); //output :- "I'm chandra"
+
+//how objects and arrays are references
+const hobbies = ["a", "b"];
+hobbies.push("c");
+console.log(hobbies); //output:- ['a','b','c'] here we are not seeing error because hobbies is pointing to address where array is stored.we are changing data at address but not the address this shows arrays are refernces
+
+
