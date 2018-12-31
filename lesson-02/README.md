@@ -41,5 +41,5 @@ greet1(){
 console.log(`I'm ${this.name}`)
 }
 }
-person.greet() // I'm undefined becuase this refers to global scope
-person.greet1() // I'm chandra becuase this refers to global scope
+person.greet() // I'm undefined because this refers to global scope
+person.greet1() // I'm chandra because this refers to person scope
