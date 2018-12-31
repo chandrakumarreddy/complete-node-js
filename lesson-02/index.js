@@ -43,3 +43,7 @@ data.unshift(0);
 //objects
 const obj = { a: 1, b: 2, c: 3 };
 obj.name = "chandra";
+
+//arrow functions
+const data = (a, b) => a + b; //console.log(data(2,3))
+
