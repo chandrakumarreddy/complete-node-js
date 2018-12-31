@@ -68,4 +68,20 @@ const hobbies = ["a", "b"];
 hobbies.push("c");
 console.log(hobbies); //output:- ['a','b','c'] here we are not seeing error because hobbies is pointing to address where array is stored.we are changing data at address but not the address this shows arrays are refernces
 
+const newHobbies = hobbies.slice(); // returns new array
+newHobbies.splice(0, 1); //modeifeis original array
 
+const abc = [1, 2, 3];
+const cde = [...abc, 4]; // output :- [1,2,3,4] => spread operator
+console.log(cde);
+
+const efg = (a, b, c) => {
+	console.log([a, b, c]);
+};
+
+efg(1, 2, 3); // returns [1,2,3] which is not flexible
+
+const ghi = (...args) => {
+	console.log(args);
+};
+ghi(1, 2, 3, 4); // returns [1,2,3,4] => rest opeartor which is flexible
