@@ -85,3 +85,25 @@ const ghi = (...args) => {
 	console.log(args);
 };
 ghi(1, 2, 3, 4); // returns [1,2,3,4] => rest opeartor which is flexible
+
+//object destructuring
+
+const person1 = {
+	name1: "chandra",
+	age1: 21,
+	greet2() {
+		console.log(this.name);
+	}
+};
+
+let { name1, age1 } = person1;
+
+console.log(name1, age1);
+
+const abcd = ({ name1 }) => console.log(name1);
+abcd(person1);
+
+//array de-structuring
+const hobbies1 = ["a", "b"];
+let [hobby1, hobby2] = hobbies1;
+console.log(hobby1, hobby2);
