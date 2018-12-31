@@ -43,3 +43,8 @@ console.log(`I'm ${this.name}`)
 }
 person.greet() // I'm undefined because this refers to global scope
 person.greet1() // I'm chandra because this refers to person scope
+
+//how objects and arrays are references
+const hobbies = ["a", "b"];
+hobbies.push("c");
+console.log(hobbies); //output:- ['a','b','c'] here we are not seeing error because hobbies is pointing to address where array is stored.we are changing data at address but not the address this shows arrays are refernces
