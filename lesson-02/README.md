@@ -29,3 +29,17 @@ obj.name = "chandra";
 
 //arow functions
 const data = (a, b) => a + b;
+
+//object functions
+const person={
+name:"chandra",
+age:21,
+greet:()=>{
+console.log(`I'm ${this.name}`);
+},
+greet1(){
+console.log(`I'm ${this.name}`)
+}
+}
+person.greet() // I'm undefined becuase this refers to global scope
+person.greet1() // I'm chandra becuase this refers to global scope
