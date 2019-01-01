@@ -1,4 +1,4 @@
-##pure functions=> depends only on arguments passed.no interaction with outside code or with api's,databases etc
+# pure functions=> depends only on arguments passed.no interaction with outside code or with api's,databases etc
 
 ```
 function pureFunction(a, b, c) {
@@ -8,9 +8,9 @@ return "a value is " + a + ",b value is " + b + ",c value is " + c;
 console.log(pureFunction(2, 3, 4));
 ```
 
-#arrays and objects
+# arrays and objects
 
-##array opertaions (not recommended to use in real world)
+# array opertaions (not recommended to use in real world)
 
 ```
 data.push(3);
