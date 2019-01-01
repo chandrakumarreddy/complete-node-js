@@ -21,7 +21,7 @@ data.unshift(0);
 
 ---
 
-##recommended to use in real world
+## recommended to use in real world
 
 ```
 [1, 2, 3, 4].forEach(item => console.log(item));
@@ -32,20 +32,20 @@ data.unshift(0);
 ].filter(item => item > 1);
 ```
 
-##objects
+## objects
 
 ```
 const obj = { a: 1, b: 2, c: 3 };
 obj.name = "chandra";
 ```
 
-##arrow functions
+## arrow functions
 
 ```
 const data = (a, b) => a + b;
 ```
 
-##object functions
+## object functions
 
 ```
 const person={
@@ -62,7 +62,7 @@ person.greet() // I'm undefined because this refers to global scope
 person.greet1() // I'm chandra because this refers to person scope
 ```
 
-##how objects and arrays are references
+## how objects and arrays are references
 
 ```
 const hobbies = ["a", "b"];
@@ -70,14 +70,14 @@ hobbies.push("c");
 console.log(hobbies); //output:- ['a','b','c'] here we are not seeing error because hobbies is pointing to address where array is stored.we are changing data at address but not the address this shows arrays are refernces
 ```
 
-##array modifiers
+## array modifiers
 
 ```
 const newHobbies = hobbies.slice(); // returns new array
 newHobbies.splice(0, 1); //modeifeis original array
 ```
 
-##rest opeartor and spread operator
+## rest opeartor and spread operator
 
 ```
 const abc=[1,2,3];
@@ -95,7 +95,7 @@ console.log(args)
 ghi(1,2,3,4) // returns [1,2,3,4] => rest opeartor which is flexible
 ```
 
-##object destructuring
+## object destructuring
 
 ```
 const person1 = {
@@ -114,7 +114,7 @@ const abcd = ({ name1 }) => console.log(name1);
 abcd(person1);
 ```
 
-##array de-structuring
+## array de-structuring
 
 ```
 const hobbies1 = ["a", "b"];
