@@ -1,1 +1,1 @@
-<img src="images/image-1.xcf"/>
+<img src="images/image-1.png"/>
