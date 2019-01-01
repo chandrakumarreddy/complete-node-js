@@ -2,7 +2,7 @@
 
 ```
 function pureFunction(a, b, c) {
-return "a value is " + a + ",b value is " + b + ",c value is " + c;
+	return "a value is " + a + ",b value is " + b + ",c value is " + c;
 }
 
 console.log(pureFunction(2, 3, 4));
@@ -13,10 +13,10 @@ console.log(pureFunction(2, 3, 4));
 # array opertaions (not recommended to use in real world)
 
 ```
-*. data.push(3);
-*. data.pop();
-*. data.shift();
-*. data.unshift(0);
+1. data.push(3);
+2. data.pop();
+3. data.shift();
+4. data.unshift(0);
 ```
 
 ---
@@ -24,11 +24,11 @@ console.log(pureFunction(2, 3, 4));
 ## recommended to use in real world
 
 ```
-* [1, 2, 3, 4].forEach(item => console.log(item));
-* ["red", "green", "blue"].find(item => item === "blue");
-* [1, 2, 3].map(item => item \_ 2);
-* [1, 2, 3].reduce((total, a) => total + a);
-* [1, 2, 3].filter(item => item > 1);
+- [1, 2, 3, 4].forEach(item => console.log(item)); `loops through entire array`
+- ["red", "green", "blue"].find(item => item === "blue"); `return single element`
+- [1, 2, 3].map(item => item * 2); `returns transformated array`
+- [1, 2, 3].reduce((total, a) => total + a); `returns single value from an elements of array`
+- [1, 2, 3].filter(item => item > 1); `returns subset of an array`
 ```
 
 ## objects
@@ -57,8 +57,8 @@ const person={
 	console.log(`I'm ${this.name}`)
 }
 }
-person.greet() // I'm undefined because this refers to global scope
-person.greet1() // I'm chandra because this refers to person scope
+person.greet()  `I'm undefined because this refers to global scope`
+person.greet1() `I'm chandra because this refers to person scope`
 ```
 
 ## how objects and arrays are references
@@ -66,32 +66,31 @@ person.greet1() // I'm chandra because this refers to person scope
 ```
 const hobbies = ["a", "b"];
 hobbies.push("c");
-console.log(hobbies); //output:- ['a','b','c'] here we are not seeing error because hobbies is pointing to address where array is stored.we are changing data at address but not the address this shows arrays are refernces
+console.log(hobbies); `output:- ['a','b','c'] here we are not seeing error because hobbies is pointing to address where array is stored.we are changing data at address but not the address this shows arrays are refernces`
 ```
 
 ## array modifiers
 
 ```
-const newHobbies = hobbies.slice(); // returns new array
-newHobbies.splice(0, 1); //modeifeis original array
+const newHobbies = hobbies.slice();  `returns new array`
+newHobbies.splice(0, 1); `modeifeis original array`
 ```
 
 ## rest opeartor and spread operator
 
 ```
 const abc=[1,2,3];
-const cde=[...abc,4] // output :- [1,2,3,4] => spread operator
+const cde=[...abc,4] ` output :- [1,2,3,4] => spread operator `
 
 const efg=(a,b,c)=>{
 	console.log([a,b,c])
 }
-
-efg(1,2,3) // returns [1,2,3] which is not flexible
+efg(1,2,3)  `returns [1,2,3] which is not flexible`
 
 const ghi=(...args)=>{
 	console.log(args)
 }
-ghi(1,2,3,4) // returns [1,2,3,4] => rest opeartor which is flexible
+ghi(1,2,3,4)  `returns [1,2,3,4] => rest opeartor which is flexible`
 ```
 
 ## object destructuring
@@ -106,9 +105,7 @@ const person1 = {
 };
 
 let { name1, age1 } = person1;
-
 console.log(name1, age1);
-
 const abcd = ({ name1 }) => console.log(name1);
 abcd(person1);
 ```
@@ -119,4 +116,42 @@ abcd(person1);
 const hobbies1 = ["a", "b"];
 let [hobby1, hobby2] = hobbies1;
 console.log(hobby1, hobby2);
+```
+
+## promises vs callbacks
+
+##### callbacks
+
+```
+function callMe(callback){
+	setTimeout(()=>{
+		callback('done')
+	},2000)
+}
+
+callMe(text=>console.log(text))
+
+
+callMe((text)=>{
+	setTimeout(()=>console.log(text),2000)
+})
+```
+
+##### promises
+
+```
+function callMe1() {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve("done from callMe1");
+		});
+	}, 1000);
+}
+
+callMe1()
+	.then(text => {
+		console.log(text);
+		return callMe1();
+	})
+	.then(text => console.log(text));
 ```

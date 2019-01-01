@@ -107,3 +107,33 @@ abcd(person1);
 const hobbies1 = ["a", "b"];
 let [hobby1, hobby2] = hobbies1;
 console.log(hobby1, hobby2);
+
+// callbacks
+
+function callMe(callback) {
+	setTimeout(() => {
+		callback("done from callMe");
+	}, 2000);
+}
+
+callMe(text => console.log(text));
+
+callMe(text => {
+	setTimeout(() => console.log(text), 2000);
+});
+
+//promises
+function callMe1() {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve("done from callMe1");
+		});
+	}, 1000);
+}
+
+callMe1()
+	.then(text => {
+		console.log(text);
+		return callMe1();
+	})
+	.then(text => console.log(text));
