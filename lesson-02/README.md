@@ -13,10 +13,10 @@ console.log(pureFunction(2, 3, 4));
 # array opertaions (not recommended to use in real world)
 
 ```
-data.push(3);
-data.pop();
-data.shift();
-data.unshift(0);
+*. data.push(3);
+*. data.pop();
+*. data.shift();
+*. data.unshift(0);
 ```
 
 ---
@@ -24,12 +24,11 @@ data.unshift(0);
 ## recommended to use in real world
 
 ```
-[1, 2, 3, 4].forEach(item => console.log(item));
-["red", "green", "blue"].find(item => item === "blue");
-[1, 2, 3].map(item => item \_ 2);
-[1, 2, 3].reduce((total, a) => total + a)
-(1, 2, 3)
-].filter(item => item > 1);
+* [1, 2, 3, 4].forEach(item => console.log(item));
+* ["red", "green", "blue"].find(item => item === "blue");
+* [1, 2, 3].map(item => item \_ 2);
+* [1, 2, 3].reduce((total, a) => total + a);
+* [1, 2, 3].filter(item => item > 1);
 ```
 
 ## objects
@@ -84,13 +83,13 @@ const abc=[1,2,3];
 const cde=[...abc,4] // output :- [1,2,3,4] => spread operator
 
 const efg=(a,b,c)=>{
-console.log([a,b,c])
+	console.log([a,b,c])
 }
 
 efg(1,2,3) // returns [1,2,3] which is not flexible
 
 const ghi=(...args)=>{
-console.log(args)
+	console.log(args)
 }
 ghi(1,2,3,4) // returns [1,2,3,4] => rest opeartor which is flexible
 ```
@@ -99,11 +98,11 @@ ghi(1,2,3,4) // returns [1,2,3,4] => rest opeartor which is flexible
 
 ```
 const person1 = {
-name1: "chandra",
-age1: 21,
-greet2() {
-console.log(this.name);
-}
+	name1: "chandra",
+	age1: 21,
+	greet2() {
+	console.log(this.name);
+	}
 };
 
 let { name1, age1 } = person1;
