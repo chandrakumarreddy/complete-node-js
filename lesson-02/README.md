@@ -24,11 +24,11 @@ console.log(pureFunction(2, 3, 4));
 ## recommended to use in real world
 
 ```
-- [1, 2, 3, 4].forEach(item => console.log(item)); `loops through entire array`
-- ["red", "green", "blue"].find(item => item === "blue"); `return single element`
-- [1, 2, 3].map(item => item * 2); `returns transformated array`
-- [1, 2, 3].reduce((total, a) => total + a); `returns single value from an elements of array`
-- [1, 2, 3].filter(item => item > 1); `returns subset of an array`
+-[1, 2, 3, 4].forEach(item => console.log(item)); `loops through entire array`
+-["red", "green", "blue"].find(item => item === "blue"); `return single element`
+-[1, 2, 3].map(item => item * 2); `returns transformated array`
+-[1, 2, 3].reduce((total, a) => total + a); `returns single value from an elements of array`
+-[1, 2, 3].filter(item => item > 1); `returns subset of an array`
 ```
 
 ## objects
